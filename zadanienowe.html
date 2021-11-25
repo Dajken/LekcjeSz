@@ -1,0 +1,35 @@
+<script>
+
+    function silnia_rek(n) {
+        if (n == 1) {
+            return 1
+        } else {
+            return n * silnia_rek(n - 1)
+        }
+    }
+
+    function ciagfib(x) {
+        if (x==0) {
+            return 0
+        }
+        else if (x==1) {
+            return 1
+        } else if (x>1){
+           x = ciagfib(x-1) + ciagfib(x-2)
+           return x 
+        }
+    }
+    
+ function potega(x, y){
+    if(y==0) {
+        return 1
+    } else if(y==1) {
+        return x
+    } else {
+        x = x * potega(x)
+        return x
+    }
+ }
+console.log(potega(3,2))
+
+</script>

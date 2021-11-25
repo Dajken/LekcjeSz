@@ -1,0 +1,55 @@
+<script>
+
+function lata() {
+    let l1 = prompt("podaj rok urodzenia")
+    let l2 = prompt("podaj miesiac urodzenia")
+    let l3 = prompt("podaj dzien urodzenia")
+
+    let x = parseInt(l1)
+    let y = parseInt(l2)
+    let z = parseInt(l3)
+
+    let data1 = new Date(x,y-1,z)
+    let data2 = new Date()
+
+
+    let dni1 = data1.getDate()
+    let mies1 = data1.getMonth()
+    let rok1 = data1.getFullYear()
+    let dni2 = data2.getDate()
+    let mies2 = data2.getMonth()
+    let rok2 = data2.getFullYear()
+    var miesiac
+    var dzien
+    let rlat = rok2 - rok1
+
+    if(mies1<mies2){
+        miesiac = mies2 - mies1
+    } else if(mies1>mies2){
+        rlat-1
+    }
+    
+
+
+
+
+
+
+
+
+    if(dni1>dni2){
+        dzien=dni1 - dni2
+    } else if(dni1<dni2){
+        dzien=dni2 - dni1
+    } else if(dni1==dni2){
+        dzien=0
+    }
+
+    
+
+    return "masz " + rlat + "lat " + miesiac + "miesiecy " + dzien + "dni" 
+}
+
+console.log(lata())
+
+</script>

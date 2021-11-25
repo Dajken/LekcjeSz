@@ -1,0 +1,19 @@
+<script>
+
+
+    function datacala (x) {
+        var data = new Date()
+        var dzien = data.getDate()
+        var miesiac = data.getMonth()+1
+        var rok = data.getFullYear()
+        if(x=="PL"){
+            return dzien+","+miesiac+","+rok 
+        } else if(x=="US"){
+            return miesiac+","+dzien+","+rok
+        } else { return("nie rozumiem") }
+    }
+    
+    console.log(datacala("PL"))
+    
+    
+    </script>
